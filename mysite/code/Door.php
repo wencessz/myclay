@@ -85,7 +85,7 @@ class Door_Controller extends Page_Controller {
 	public function open(SS_HTTPRequest $request) {
 		$door = Door::get()->byId($request->param('ID'));
 		if($door->hasAccess(Member::currentUser())){
-			$access = "granted";
+			$access = "ok";
 		}else{
 			$access = "denied";
 		}

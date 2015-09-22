@@ -18,13 +18,22 @@ jQuery.noConflict();
             });
             $.ajax($basePath+url)
                 .done(function (response) {
-                    element.parent().find('.response').addClass(response);
+                    element.closest('.door').addClass(response);
+                    element.closest('.door').removeClass("closed");
+                    if(response == "ok"){
+                        element.closest('.door').addClass("opened");
+                        element.closest('.door').find(".response").html("acces granted");
+                    }else{
+                        element.closest('.door').addClass("denied");
+                        element.closest('.door').find(".response").html("acces denied");
+                    }
                     element.remove();
+
                 })
                 .fail (function (xhr) {
                     alert('Error: ' + xhr.responseText);
-                });
-                HoldOn.close();
+                })
+                .complete(HoldOn.close());
         });
     }
 });

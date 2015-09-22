@@ -19,3 +19,36 @@ body,.typography h1,.typography h2,.typography h3{
 .header .primary li a {
 	font-weight:100;
 }
+
+ul li.door{
+	list-style-type: none;
+	margin: 0 0 7px 0px;
+	text-indent: 21px;
+}
+
+li.door.closed{
+	background: url('../images/door-closed.png') no-repeat left;
+	background-size: 17px;
+}
+
+li.door.opened{
+	background: url('../images/door-open.png') no-repeat left;
+	background-size: 17px;
+}
+
+li.door.denied{
+	background: url('../images/door-denied.png') no-repeat left;
+	background-size: 17px;
+}
+
+.denied .response{
+	color:red;
+}
+
+.opened .response{
+	color:green;
+}
+
+.response{
+	font-weight: bold;
+}
