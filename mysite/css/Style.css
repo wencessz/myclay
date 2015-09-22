@@ -1,0 +1,21 @@
+header .brand{
+	background-image: url('../images/Clay-logo-black.png');
+	width: 151px;
+	height: 77px;
+}
+header .brand p,
+header .brand h1{
+	display:none;
+}
+body,.typography h1,.typography h2,.typography h3{
+	font-family: "AvantGardeGothicITCW01B 731069",Helvetica,Arial,sans-serif;
+}
+.typography a{
+	color:#006838;
+}
+.typography a:hover{
+	color:#39B54A;
+}
+.header .primary li a {
+	font-weight:100;
+}

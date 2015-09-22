@@ -1,0 +1,76 @@
+.icon.icon-16.icon-dooradmin{
+	background-size: 15px !important;
+	background-repeat: no-repeat !important;
+	background-position: 1px 1px !important;
+}
+
+.icon.icon-16.icon-keyadmin {
+	background-size: 12px !important;
+	background-repeat: no-repeat !important;
+	background-position: 2px 0px !important;
+}
+
+.cms-logo a {
+    background: url("../images/clay.png") no-repeat left center;
+}
+
+.cms-logo-header {
+	background: #006838;
+	background-image: none;
+}
+
+.cms-logo {
+	border-bottom: 1px solid #FFFFFF;
+}
+.cms .ss-ui-button.ss-ui-action-constructive {
+	text-shadow: none;
+	font-weight: bold;
+	color: white;
+	background: #39B54A;
+	border-color: #39B54A;
+	border-bottom-color: #39B54A;
+}
+
+.cms .ss-ui-button.ss-ui-action-constructive.ui-state-hover, .cms .ss-ui-button.ss-ui-action-constructive:hover {
+	background: #006838;
+	border-color: #006838;
+	border-bottom-color: #006838;
+}
+
+.cms-menu,
+.cms-menu-list li a {
+	text-shadow:none;
+	background: #39B54A;
+	border-top:0px;
+	border-bottom:0px;
+}
+
+.cms-menu-list li a:hover,
+.cms-menu-list li.current a {
+	background: #006838;
+	border-top:0px;
+	border-bottom:0px;
+}
+
+.cms-panel .cms-panel-toggle.south {
+border-top: 0px;
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+ box-shadow: none;
+}
+
+.cms table.ss-gridfield-table tr th.main {
+	border-top: 1px solid #006838;
+	border-left: 1px solid #006838;
+	background: #006838;
+}
+.cms table.ss-gridfield-table tr.title th {
+	position: relative;
+	background: #006838;
+	border-bottom: 1px solid #333;
+}
+
+.cms table.ss-gridfield-table tr td.bottom-all {
+	background: #006838;
+	border-bottom: 1px solid #006838;
+}
