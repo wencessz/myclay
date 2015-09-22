@@ -14,7 +14,7 @@ class Door extends DataObject {
     );
 
     public function hasAccess($member) {
-    	$keys = $this->Keys()->filter('Owner.ID',$member->ID);
+    	$keys = $this->Keys()->filter('Owner.ID', $member->ID);
         return ($keys->count() || $member->inGroup('Administrators'));
     }
 
@@ -40,9 +40,9 @@ class Door extends DataObject {
 
 	public function Link($action = ''){
 		if($action){
-			return "door/".$action."/".$this->ID;		
+			return "door/" . $action . "/" . $this->ID;		
 		}
-		return "door/".$this->ID;
+		return "door/" . $this->ID;
 	}
 
 }
@@ -52,35 +52,6 @@ class Door_Controller extends Page_Controller {
     	'index' => 'SITETREE_VIEW_ALL',
         'open' => 'SITETREE_VIEW_ALL',
     );
-
-    /*public function OpenForm() {
-        $fields = new FieldList(
-            TextField::create('Description'),
-            DropdownField::create('Administrators', 'Administrator', Member::get()->filterByCallback(
-            	function($item, $list) {
-    				return ($item->inGroup('Administrators'));
-				})->map('ID', 'FirstName'))
-            	->setEmptyString('(Select one)')
-        );
-
-        $actions = new FieldList(
-            FormAction::create("doAdd")->setTitle("Submit")
-        );
-
-        $required = new RequiredFields('Description','Administrators');
-
-        $form = new Form($this, 'CreateForm', $fields, $actions, $required);
-
-        return $form;
-    }
-    
-    public function doAdd($data, Form $form) {
-        $door = new Door();
-        $member = Member::get()->byId($data['Administrators']);
-        $door->initialize($data['Description'],$member);
-        $form->sessionMessage('A new door has been created');
-        return $this->redirectBack();
-    }*/
 
 	public function open(SS_HTTPRequest $request) {
 		$door = Door::get()->byId($request->param('ID'));
@@ -95,7 +66,6 @@ class Door_Controller extends Page_Controller {
         	return $access;
     	}
 	}
-
 
 	public function index(SS_HTTPRequest $request) {
 		Requirements::javascript('http://code.jquery.com/jquery-2.1.4.min.js');
@@ -114,6 +84,5 @@ class Door_Controller extends Page_Controller {
 	        'Content' => $arrayData->renderWith('Door_List')
 	    );
 	}
-
 
 }

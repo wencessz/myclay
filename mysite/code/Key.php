@@ -32,4 +32,5 @@ class Key extends DataObject {
 	public function getCMSValidator() {
 		return new RequiredFields(array('Description', 'Owner'));
 	}
+	
 }

@@ -15,5 +15,7 @@ $databaseConfig = array(
 Security::setDefaultAdmin('admin','admin');
 LeftAndMain::set_application_link("/clay");
 Member::add_extension('MemberExtension');
+Object::useCustomClass('MemberLoginForm', 'CustomLogin');
+Security::set_default_login_dest( 'door' );
 // Set the site locale
 i18n::set_locale('en_US');
