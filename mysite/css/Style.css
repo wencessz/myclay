@@ -52,3 +52,20 @@ li.door.denied{
 .response{
 	font-weight: bold;
 }
+
+article {
+	width:60%;
+	margin-right: 10px;
+}
+
+aside {
+	width:30%;
+}
+
+article,aside{
+	float:left;
+}
+
+.typography h1 {
+	border-bottom:0px;
+}
