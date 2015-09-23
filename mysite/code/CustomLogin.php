@@ -7,7 +7,7 @@ class CustomLogin extends MemberLoginForm {
         if(Member::currentUserID()) {
             return $this->redirectByGroup($data);
         }else{
-        	return Controller::redirectBack();
+        	return Controller::redirect("/Security/login");
         }
     }
  
@@ -21,7 +21,7 @@ class CustomLogin extends MemberLoginForm {
 			return Controller::redirect( Director::baseURL()."door");
 		}
 		//otherwise if none of the above worked return fase
-		return false;
+		return Controller::redirect("/Security/login");
 	}
 					
 	
