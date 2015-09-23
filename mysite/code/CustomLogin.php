@@ -2,7 +2,6 @@
  
 class CustomLogin extends MemberLoginForm {
  
-	// this function is overloaded on our sublcass (this) to do something different
     public function dologin($data) {
         parent::dologin($data);
         if(Member::currentUserID()) {

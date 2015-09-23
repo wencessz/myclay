@@ -68,11 +68,15 @@ class Door_Controller extends Page_Controller {
 	}
 
 	public function index(SS_HTTPRequest $request) {
+		
 		Requirements::javascript('http://code.jquery.com/jquery-2.1.4.min.js');
+		
 		Requirements::javascriptTemplate('mysite/plugin/HoldOn.min.js'); //loading HoldOn plugin
+		
 		Requirements::javascriptTemplate('mysite/javascript/openDoor.js', array(
 			'basePath' => Director::BaseURL(),
 		)); // loading opendoor managment
+
 		Requirements::block(THIRDPARTY_DIR . '/jquery/jquery.js');
 		$arrayData = new ArrayData(array(
 		    'doors' => Door::get()
